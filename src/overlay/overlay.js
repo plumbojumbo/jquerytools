@@ -141,11 +141,11 @@
 					 oHeight = overlay.outerHeight(true); 
 				
 				if (typeof top == 'string')  {
-					top = top == 'center' ? Math.max((w.height() - oHeight) / 2, 0) : 
-						parseInt(top, 10) / 100 * w.height();			
+					top = Math.round(top == 'center' ? Math.max((w.height() - oHeight) / 2, 0) : 
+						parseInt(top, 10) / 100 * w.height());
 				}				
 				
-				if (left == 'center') { left = Math.max((w.width() - oWidth) / 2, 0); }
+				if (left == 'center') { left = Math.round(Math.max((w.width() - oWidth) / 2, 0)); }
 
 				
 		 		// load effect  		 		
